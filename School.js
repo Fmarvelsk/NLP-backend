@@ -17,6 +17,6 @@ const WordSchema = new Schema({
 
 })
 
-const School = mongoose.model('School', WordSchema);
+const School = mongoose.model('school', WordSchema);
 
 export default School;
