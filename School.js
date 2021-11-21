@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 const Schema = mongoose.Schema;
 
 const WordSchema = new Schema({
-    Names : {
+    Name : {
         type: String
     },
     Transcription : {

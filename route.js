@@ -4,7 +4,9 @@ const router = express.Router();
 
 
 router.get('/school', async (req, res) => {
-    const result = await School.findOne({ Schools: req.query.school })
+   console.log(req.query)
+   try {
+    const result = await School.findOne({ Name: req.query.school })
     if (!result) {
         return res.status(400).json({
             message: "error"
@@ -15,6 +17,10 @@ router.get('/school', async (req, res) => {
             data: result,
         })
     }
+}
+catch(err) {
+    console.log(err)
+}
 });
 
 export default router
